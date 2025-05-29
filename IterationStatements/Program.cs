@@ -92,8 +92,7 @@
         { 
             Console.WriteLine("Alright, let's see if you are allowed to vote. How old are you?");
             
-            var userInput = Console.ReadLine();
-            var userAge = int.Parse(userInput);
+            var userAge = int.Parse(Console.ReadLine());
             age = userAge;
             
             if (age >= 18)
@@ -141,14 +140,16 @@
         static void DisplayMultiplicationTable(int number)
         {
             Console.WriteLine("Want some help with multiplication? Give me a number and I'll help.");
-            var userInput = Console.ReadLine();
-            var gvnnum = int.Parse(userInput);
+            var gvnnum = int.Parse(Console.ReadLine());
             number = gvnnum;
 
-            for (int i = 1; i <= 12; i++)
+            int i = 1;
+
+            while (i <= 12)
             {
                 var result = gvnnum * i;
                 Console.WriteLine($"{gvnnum} x {i} = {result}");
+                i++;
             }
         }
 
